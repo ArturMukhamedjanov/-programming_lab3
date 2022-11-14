@@ -6,4 +6,5 @@ public interface IPerson {
     APlace getPlace();
     String getName();
     Status getStatus();
+    Condition getCondition();
 }

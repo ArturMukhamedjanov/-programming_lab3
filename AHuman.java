@@ -34,6 +34,7 @@ public abstract class AHuman implements IPerson{
     public Status getStatus(){
         return status;
     }
+    public Condition getCondition(){return condition;}
     public void say(String massage){
         System.out.println(name +" говорит: \"" + massage + "\".");
     }

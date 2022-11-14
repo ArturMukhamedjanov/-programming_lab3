@@ -9,4 +9,7 @@ public enum Material {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 }

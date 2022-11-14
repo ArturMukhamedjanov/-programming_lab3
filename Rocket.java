@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Random;
 
 public class Rocket implements IFlyable{
@@ -42,5 +43,30 @@ public class Rocket implements IFlyable{
     }
     public void takeoff(){
         System.out.println("Ракета \"" + name + "\" успешно взелета");
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Rocket rocket = (Rocket) o;
+        return rocket.getName().equals(getName())
+                && rocket.getMaterial() == getMaterial()
+                && rocket.getBroken() == getBroken();
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(getName(), getMaterial(), getBroken());
+    }
+    @Override
+    public String toString(){
+        return "Rocket{" +
+                "name='" + getName() + '\''+
+                ", material=" + getMaterial() +
+                ", isBroken=" + getBroken() +"}";
     }
 }

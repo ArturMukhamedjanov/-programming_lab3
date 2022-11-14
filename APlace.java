@@ -12,6 +12,7 @@ public abstract class APlace {
     }
 
     public String getName(){return this.name;}
+    public ArrayList<AFurniture> getFurnitures(){return this.furnitures;}
     public void setFurniture(AFurniture furniture){
         furnitures.add(furniture);
     }
